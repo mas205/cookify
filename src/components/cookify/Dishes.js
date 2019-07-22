@@ -42,7 +42,7 @@ const renderContent = (classes, props) => {
                         <Grid item xs={12} className={classes.grid_header}>
                             <Paper className={classes.paper}>
                                 <Typography variant="h5" className={classes.title}>
-                                    Public Dishes
+                                    My Dishes
                                     <Link to="/dishes/new"><Icon className={classes.icon} color="primary" style={{float: 'right'}}>add_circle</Icon></Link>
                                 </Typography>
                             </Paper>
@@ -53,6 +53,7 @@ const renderContent = (classes, props) => {
                                 <Paper className={classes.paper}>
                                     <Typography variant="h6" className={classes.title}>
                                         {dish.name}
+                                        <Link to={`/dishes/edit/${dish.id}`}><Icon className={classes.icon} color="primary" style={{float: 'right'}}>edit</Icon></Link>
                                         <a href='/' onClick={(e) => {
                                             e.preventDefault();
                                             props.deleteDish(dish);

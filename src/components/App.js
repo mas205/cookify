@@ -6,6 +6,7 @@ import Home from './cookify/Home'
 import PublicDishes from './cookify/PublicDishes'
 import DishForm from './cookify/DishForm'
 import Header from './Header'
+import DishEditForm from './cookify/DishEditForm'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/dishes" exact component={Dishes} />
                 <Route path="/public_dishes" exact component={PublicDishes} />
                 <Route path="/dishes/new" exact component={DishForm} />
+                <Route path="/dishes/edit/:id" exact component={DishEditForm} />
             </BrowserRouter>
         </div> 
     )

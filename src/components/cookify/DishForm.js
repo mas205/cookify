@@ -93,7 +93,8 @@ const DishForm = (props) => {
         alert("submited!");
         console.log(props);
         const val = values.public || false;
-        props.addDish({...values, clientId: props.clientId, public: val});
+        const ing = values.ingredientes.split(",").map(e => e.trim())
+        props.addDish({...values, clientId: props.clientId, public: val, ingredientes: ing});
     }
 
     return(
